@@ -66,6 +66,13 @@ dt.predict([[0.5,0.8,9,260,6,0,1,2]])
 ### DATA HEAD:
 <img width="1115" alt="image" src="https://github.com/gauthamkrishna7/Implementation-of-Decision-Tree-Classifier-Model-for-Predicting-Employee-Churn/assets/141175025/bc753f9a-8a09-4815-89ae-79ec8e165e8a">
 
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+
 ### DATASET INFO:
 <img width="1115" alt="image" src="https://github.com/gauthamkrishna7/Implementation-of-Decision-Tree-Classifier-Model-for-Predicting-Employee-Churn/assets/141175025/f760819f-e78e-4a12-8b8c-32daeacb3410">
 
