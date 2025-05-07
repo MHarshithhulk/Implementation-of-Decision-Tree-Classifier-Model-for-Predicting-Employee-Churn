@@ -8,6 +8,7 @@ To write a program to implement the Decision Tree Classifier Model for Predictin
 2. Anaconda – Python 3.7 Installation / Jupyter notebook
 
 ## Algorithm
+
 1. Import the required libraries.
 
 2. Upload and read the dataset.
@@ -21,24 +22,25 @@ To write a program to implement the Decision Tree Classifier Model for Predictin
 ## Program:
 ```
 /*
-Program to implement the the Logistic Regression Using Gradient Descent.
-Developed by: GAUTHAM KRISHNA S
-RegisterNumber:  212223240036
+Program to implement the Decision Tree Classifier Model for Predicting Employee Churn.
+Developed by: HARSHITH.M
+RegisterNumber:  212224040206
 */
 ```
-```py
+```python
 import pandas as pd
-data = pd.read_csv("Employee (1).csv")
+data=pd.read_csv("Employee.csv")
 data.head()
 
 data.info()
+
 data.isnull().sum()
+
 data['left'].value_counts()
 
 from sklearn.preprocessing import LabelEncoder
-le = LabelEncoder()
-
-data['salary'] = le.fit_transform(data['salary'])
+le=LabelEncoder()
+data['salary']=le.fit_transform(data['salary'])
 data.head()
 
 x=data[['satisfaction_level','last_evaluation','number_project','average_montly_hours','time_spend_company','Work_accident','promotion_last_5years','salary']]
@@ -47,8 +49,7 @@ x.head()
 y=data['left']
 
 from sklearn.model_selection import train_test_split
-x_train,x_test,y_train,y_test = train_test_split(x,y,test_size=0.2,random_state =100)
-
+x_train,x_test,y_train,y_test=train_test_split(x,y,test_size=0.2,random_state=100)
 from sklearn.tree import DecisionTreeClassifier
 dt=DecisionTreeClassifier(criterion='entropy')
 dt.fit(x_train,y_train)
@@ -58,84 +59,34 @@ from sklearn import metrics
 accuracy=metrics.accuracy_score(y_test,y_predict)
 accuracy
 
-dt.predict([[0.5,0.8,9,260,6,0,1,2]])
+dt.predict([[0.5,0.8,9,206,6,0,1,2]])
 ```
 
 ## Output:
+### Data Head:
+![image](https://github.com/HIRU-VIRU/Implementation-of-Decision-Tree-Classifier-Model-for-Predicting-Employee-Churn/assets/145972122/d5cb75c8-1a61-40b1-9f55-9dd6e2f28fe9)
 
-### DATA HEAD:
-<img width="1115" alt="image" src="https://github.com/gauthamkrishna7/Implementation-of-Decision-Tree-Classifier-Model-for-Predicting-Employee-Churn/assets/141175025/bc753f9a-8a09-4815-89ae-79ec8e165e8a">
+### Dataset info :
+![image](https://github.com/HIRU-VIRU/Implementation-of-Decision-Tree-Classifier-Model-for-Predicting-Employee-Churn/assets/145972122/909d5c90-e8fc-4e80-a696-180be9736872)
 
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
+### Null Dataset:
+![image](https://github.com/HIRU-VIRU/Implementation-of-Decision-Tree-Classifier-Model-for-Predicting-Employee-Churn/assets/145972122/955a342a-5f5c-4b9e-b092-08c418ca2f04)
 
-### DATASET INFO:
-<img width="1115" alt="image" src="https://github.com/gauthamkrishna7/Implementation-of-Decision-Tree-Classifier-Model-for-Predicting-Employee-Churn/assets/141175025/f760819f-e78e-4a12-8b8c-32daeacb3410">
+### Values count in left column:
+![image](https://github.com/HIRU-VIRU/Implementation-of-Decision-Tree-Classifier-Model-for-Predicting-Employee-Churn/assets/145972122/1e5df3da-26d0-4310-b3c4-7ef739eb55c3)
 
-### NULL DATASET:
-<img width="1115" alt="image" src="https://github.com/gauthamkrishna7/Implementation-of-Decision-Tree-Classifier-Model-for-Predicting-Employee-Churn/assets/141175025/67c8a973-c928-44e6-be58-ffd98b45057b">
+### Dataset transformed head:
+![image](https://github.com/HIRU-VIRU/Implementation-of-Decision-Tree-Classifier-Model-for-Predicting-Employee-Churn/assets/145972122/c5309dd8-61d5-4bbc-9339-ce580509b787)
 
-### VALUES COUNT IN LEFT COLUMN:
-<img width="1115" alt="image" src="https://github.com/gauthamkrishna7/Implementation-of-Decision-Tree-Classifier-Model-for-Predicting-Employee-Churn/assets/141175025/01f07495-4958-4186-bee8-c6632195895e">
+### x.head:
+![image](https://github.com/HIRU-VIRU/Implementation-of-Decision-Tree-Classifier-Model-for-Predicting-Employee-Churn/assets/145972122/f10c925a-3ac2-44ef-a6ec-1e15da68f1d8)
+### Accuracy:
 
-### DATASET TRANSFORMED HEAD:
-<img width="1115" alt="image" src="https://github.com/gauthamkrishna7/Implementation-of-Decision-Tree-Classifier-Model-for-Predicting-Employee-Churn/assets/141175025/1138eafe-ce6f-4fde-85e9-71daf0b64c00">
+![image](https://github.com/HIRU-VIRU/Implementation-of-Decision-Tree-Classifier-Model-for-Predicting-Employee-Churn/assets/145972122/723a87ad-58a9-4512-90d1-31cddd146a48)
 
-### X.HEAD:
-<img width="1115" alt="image" src="https://github.com/gauthamkrishna7/Implementation-of-Decision-Tree-Classifier-Model-for-Predicting-Employee-Churn/assets/141175025/569580d7-a8b0-4d20-a637-73bf2f4bc9fe">
+### Data prediction:
+![image](https://github.com/HIRU-VIRU/Implementation-of-Decision-Tree-Classifier-Model-for-Predicting-Employee-Churn/assets/145972122/c51ce862-b453-4847-abcc-cfb56674ed3d)
 
-### ACCURACY:
-<img width="1115" alt="image" src="https://github.com/gauthamkrishna7/Implementation-of-Decision-Tree-Classifier-Model-for-Predicting-Employee-Churn/assets/141175025/2dfb7e6d-2f2c-4b47-a09f-f766553e9dc5">
-
-### DATA PREDICTION:
-<img width="1115" alt="image" src="https://github.com/gauthamkrishna7/Implementation-of-Decision-Tree-Classifier-Model-for-Predicting-Employee-Churn/assets/141175025/0e11798e-c2ab-44ee-875b-982d940a1851">
-
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
 
 ## Result:
 Thus the program to implement the  Decision Tree Classifier Model for Predicting Employee Churn is written and verified using python programming.
